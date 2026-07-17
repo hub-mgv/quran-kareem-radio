@@ -171,15 +171,18 @@ export const loadRecitations = memoize(async () => {
 
 		return [defaultRecitation, ...mappedEditions] as MappedRecitationEdition[];
 	} catch (error) {
-		console.log(`[LOAD_RECITATIONS] FATAL`, error)
+		console.log(`[LOAD_RECITATIONS] FATAL`, error);
 		loadRecitations.cache.clear?.();
 		return [defaultRecitation];
 	}
 });
 
-setInterval(() => {
-	if (loadRecitations.cache.clear) {
-		console.log("Clearing recitations cache");
-		loadRecitations.cache.clear();
-	}
-}, 1000 * 60 * 60 * 24 /* 24 hours */);
+setInterval(
+	() => {
+		if (loadRecitations.cache.clear) {
+			console.log("Clearing recitations cache");
+			loadRecitations.cache.clear();
+		}
+	},
+	1000 * 60 * 60 * 24 /* 24 hours */
+);

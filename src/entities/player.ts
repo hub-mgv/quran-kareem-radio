@@ -65,7 +65,8 @@ export class Player extends EventEmitter {
 
 		this.state = {
 			...request,
-			surah: request.id === "default" ? 1 : request.surah ?? request.surahs[0],
+			surah:
+				request.id === "default" ? 1 : (request.surah ?? request.surahs[0]),
 		};
 		this.player = player;
 	}

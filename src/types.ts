@@ -48,8 +48,7 @@ export type NonAutocompleteCommandOption = CommandOptionBase & {
 };
 
 export type CommandOption =
-	| AutocompleteCommandOption
-	| NonAutocompleteCommandOption;
+	AutocompleteCommandOption | NonAutocompleteCommandOption;
 
 export interface BaseCommandType {
 	name: string;

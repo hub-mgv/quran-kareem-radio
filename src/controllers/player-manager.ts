@@ -70,7 +70,7 @@ export class PlayerManager extends EventEmitter {
 		const existingPlayer = subscription
 			? this.retrievePlayerByRecitationId(
 					subscription.recitation_id as RecitationIdentifier
-			  )
+				)
 			: null;
 
 		if (existingPlayer && subscription && !sameRecitation) {
@@ -204,7 +204,7 @@ export class PlayerManager extends EventEmitter {
 				process.env.MODE === "DEVELOPMENT"
 					? rawSubscriptions.filter(
 							(sub) => sub.guild_id === process.env.DEV_SERVER_ID
-					  )
+						)
 					: rawSubscriptions;
 
 			const recitations = await loadRecitations();
@@ -248,7 +248,7 @@ export class PlayerManager extends EventEmitter {
 								recitationId: expectedRecitation,
 								surah: playback?.surah ?? 1,
 							};
-					  })
+						})
 					: playbacks;
 
 			await Promise.allSettled(

@@ -22,6 +22,7 @@
 		"@types/lodash": "^4.17.16",
 		"@types/stream-throttle": "^0.1.4",
 		"node-gyp": "^9.4.1",
+		"prettier": "^3.9.5",
 		"ts-node": "^10.9.2",
 		"tsconfig-paths": "^4.2.0",
 		"typescript": "^5.0.0"

@@ -33,7 +33,7 @@ export const initAnalytics = (client: Client) => {
 					connection.joinConfig.channelId!
 				) as VoiceChannel;
 
-				if(channel.members.size === 0) return members;
+				if (channel.members.size === 0) return members;
 
 				return channel.members.size - 1 + members;
 			}, 0);

@@ -27,8 +27,7 @@ const isAutocompleteOption = (
 ): option is AutocompleteCommandOption => option.autocomplete;
 
 type InteractionCommandType =
-	| ChatInputCommandInteraction
-	| AutocompleteInteraction;
+	ChatInputCommandInteraction | AutocompleteInteraction;
 
 const isInteractionCommand = (
 	interaction: Interaction
@@ -60,7 +59,7 @@ const onInteractionCreate: ListenerType<"interactionCreate">["execute"] =
 			const optionsList = subcommandName
 				? command.subcommands?.find(
 						(subcommand) => subcommand.name === subcommandName
-				  )?.options
+					)?.options
 				: command.options;
 
 			if (!command) {
